@@ -1,0 +1,1 @@
+"""Financeiro dashboard package."""

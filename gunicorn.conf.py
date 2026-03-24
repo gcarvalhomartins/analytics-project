@@ -1,0 +1,10 @@
+bind = "0.0.0.0:8050"
+workers = 4
+worker_class = "sync"
+timeout = 120
+keepalive = 5
+accesslog = "/var/log/analytics/access.log"
+errorlog = "/var/log/analytics/error.log"
+loglevel = "info"
+capture_output = True
+enable_stdio_inheritance = True

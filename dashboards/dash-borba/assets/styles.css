@@ -1,0 +1,69 @@
+/* ============================================================
+   BI Monitoramento de Alertas · Município de Borba - AM
+   Light theme — gray page, white cards, blue accents
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #F1F5F9;
+    color: #475569;
+    min-height: 100vh;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────── */
+::-webkit-scrollbar          { width: 7px; height: 7px; }
+::-webkit-scrollbar-track    { background: #E2E8F0; border-radius: 10px; }
+::-webkit-scrollbar-thumb    { background: #93C5FD; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #1A56DB; }
+
+/* ── Dash Dropdown overrides ────────────────────────────────── */
+.Select-control {
+    border-radius: 8px !important;
+    border: 1.5px solid #CBD5E1 !important;
+    background: #fff !important;
+    font-family: 'DM Sans', sans-serif !important;
+    transition: border-color .2s, box-shadow .2s;
+}
+.Select-control:hover       { border-color: #1A56DB !important; }
+.Select-control.is-focused  {
+    border-color: #1A56DB !important;
+    box-shadow: 0 0 0 3px rgba(26, 86, 219, .15) !important;
+}
+.Select-menu-outer {
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.12);
+    border: 1.5px solid #CBD5E1;
+    font-family: 'DM Sans', sans-serif;
+}
+.Select-option.is-selected { background: #EFF6FF !important; color: #1A56DB !important; }
+.Select-option.is-focused  { background: #F0F9FF !important; }
+
+/* ── Refresh button hover ──────────────────────────────────── */
+button#refresh-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(26, 86, 219, .3);
+    transition: all .2s ease;
+}
+button#refresh-btn:active { transform: translateY(0); }
+
+/* ── DataTable overrides ───────────────────────────────────── */
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner td,
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner th {
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+/* ── Plotly chart background fix ──────────────────────────── */
+.js-plotly-plot .plotly,
+.js-plotly-plot .plotly .main-svg { background: transparent !important; }
+
+/* ── Responsive tweaks ─────────────────────────────────────── */
+@media (max-width: 768px) {
+    /* reduce horizontal padding on small screens */
+    div[style*="padding: 28px 32px"] {
+        padding: 16px !important;
+    }
+}

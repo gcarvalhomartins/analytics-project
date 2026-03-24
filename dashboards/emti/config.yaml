@@ -1,0 +1,8 @@
+name: "PROGRAMA FOMENTO EMTI"
+description: "Dashboard de monitoramento de alertas da Secretaria de Estado de Educação e Desporto Escolar"
+database:
+  type: csv
+  path: dashboards/emti/alerts_202510300039-EMTI.csv
+auth_required: false
+refresh_interval: 60
+theme: "light"

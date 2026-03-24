@@ -1,0 +1,6 @@
+name: "Vendas"
+description: "Dashboard de análise de vendas com métricas de receita, ticket médio e conversão"
+database: {}
+auth_required: false
+refresh_interval: 60
+theme: "light"

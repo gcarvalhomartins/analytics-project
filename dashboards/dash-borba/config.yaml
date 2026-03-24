@@ -1,0 +1,12 @@
+name: "BI Monitoramento - Borba"
+description: "Dashboard de monitoramento de solicitações e alertas do Município de Borba - AM"
+database:
+  type: postgresql
+  host: ${DB_BORBA}
+  port: ${DB_PORT}
+  name: ${DB_NAME}
+  user: ${DB_USER}
+  password: ${DB_BORBA_PASS}
+auth_required: false
+refresh_interval: 120
+theme: "light"

@@ -1,0 +1,286 @@
+/* --- Importar Bootstrap Icons e Fonte Inter --- */
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* --- Paleta de Cores Moderna --- */
+:root {
+    /* Cores Primárias - Governo/Educação */
+    --azul-governo: #1E40AF;
+    --azul-escuro: #1E3A8A;
+    --verde-educacao: #15803D;
+    
+    /* Cores de Acento */
+    --indigo-600: #4F46E5;
+    --indigo-700: #4338CA;
+    --indigo-800: #3730A3;
+    --cyan-500: #06B6D4;
+    --cyan-600: #0891B2;
+    --emerald-500: #10B981;
+    --emerald-600: #059669;
+    
+    /* Cores Neutras */
+    --slate-50: #F8FAFC;
+    --slate-100: #F1F5F9;
+    --slate-200: #E2E8F0;
+    --slate-400: #94A3B8;
+    --slate-600: #475569;
+    --slate-700: #334155;
+    --slate-800: #1E293B;
+    
+    /* Sombras */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+    
+    /* Border Radius */
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+}
+
+/* --- Reset e Estilos Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(to bottom right, var(--slate-50) 0%, var(--slate-100) 100%);
+    color: var(--slate-800);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Container Principal --- */
+.container-fluid {
+    max-width: 100%;
+    padding: 2rem;
+}
+
+/* --- Estilo dos Cards --- */
+.card {
+    border: none;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* --- Estilo dos Dropdowns --- */
+.Select-control {
+    border-radius: var(--radius-lg) !important;
+    border: 1px solid var(--slate-200) !important;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+    background-color: white !important;
+}
+
+.Select-control:hover {
+    border-color: var(--indigo-600) !important;
+}
+
+.is-focused .Select-control {
+    border-color: var(--indigo-600) !important;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1) !important;
+}
+
+.Select-placeholder,
+.Select--single > .Select-control .Select-value {
+    color: var(--slate-600);
+    padding-left: 0.75rem;
+}
+
+.Select-menu-outer {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--slate-200);
+    margin-top: 0.5rem;
+    background-color: white;
+}
+
+.Select-option {
+    padding: 0.75rem 1rem;
+    transition: all 0.15s ease;
+}
+
+.Select-option:hover {
+    background-color: var(--slate-50);
+}
+
+.Select-option.is-selected {
+    background-color: var(--indigo-600) !important;
+    color: white;
+}
+
+.Select-option.is-focused {
+    background-color: var(--slate-100);
+}
+
+/* --- Estilo das Tabs --- */
+.nav-tabs {
+    border-bottom: 2px solid var(--slate-200);
+    margin-bottom: 1rem;
+}
+
+.nav-tabs .nav-link {
+    font-weight: 600;
+    color: var(--slate-600);
+    border: none;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--indigo-600);
+    background-color: var(--slate-50);
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--indigo-600);
+    background-color: white;
+    border-bottom: 3px solid var(--indigo-600);
+    font-weight: 700;
+}
+
+/* --- Estilo dos Gráficos --- */
+.graph-container {
+    border-radius: var(--radius-xl);
+    background-color: white;
+    box-shadow: var(--shadow-lg);
+}
+
+.js-plotly-plot {
+    border-radius: var(--radius-lg);
+}
+
+.modebar {
+    display: none !important;
+}
+
+/* --- Animações --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.row {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* --- Scrollbar Customizada --- */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--slate-100);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--slate-400);
+    border-radius: 10px;
+    transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--slate-600);
+}
+
+/* --- Estilos Responsivos --- */
+@media (max-width: 992px) {
+    .container-fluid {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 1.75rem !important;
+    }
+    
+    h4 {
+        font-size: 1.125rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 0.75rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem !important;
+    }
+    
+    .nav-tabs .nav-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* --- Loading States --- */
+._dash-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 200px;
+}
+
+._dash-loading-callback {
+    border: 3px solid var(--slate-200);
+    border-top: 3px solid var(--indigo-600);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* --- Melhorias de Acessibilidade --- */
+button:focus,
+.Select-control:focus,
+.nav-link:focus {
+    outline: 2px solid var(--indigo-600);
+    outline-offset: 2px;
+}
+
+/* --- Hover nos Cards de Filtros --- */
+.card-body {
+    transition: all 0.2s ease;
+}
+
+/* --- Estilo para mensagens de erro --- */
+.alert {
+    border-radius: var(--radius-lg);
+    border: none;
+    box-shadow: var(--shadow-md);
+}
+
+/* --- Melhorias nos Tooltips Plotly --- */
+.hoverlayer .hovertext {
+    border-radius: var(--radius-lg) !important;
+    box-shadow: var(--shadow-lg) !important;
+}

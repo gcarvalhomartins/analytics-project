@@ -1,0 +1,6 @@
+name: "Financeiro"
+description: "Dashboard financeiro com fluxo de caixa, inadimplência e projeções"
+database: {}
+auth_required: false
+refresh_interval: 120
+theme: "light"
